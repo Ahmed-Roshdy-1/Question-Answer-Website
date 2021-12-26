@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/icon.png" />
+    <title>Question Anwser</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Load TensorFlow.js. This is required to use the qna model. -->
+    <script src="js/tfjs"> </script>
+    <!-- Load the qna model. -->
+    <script src="js/qna.js"> </script>
+
+
+   
+  </head>
+  <body>
+    <section>
+      <h1>Question Anwser</h1>
+      
+      <div class="data" id="data">Mark Zuckerberg was born on May 14/1984, in White Plains, New York, and was raised in nearby Dobbs Ferry. He was born into a well-educated family and developed an interest in computer programming at an early age. While many intelligent people attend Harvard University, Mark Zuckerberg became known quickly as the go-to computer programmer on campus. By his sophomore year, he had already built two programs: CourseMatch and FaceMash.1 Both programs became wildly popular, but the university shut down the latter program after it was deemed to be inappropriate. Mark Elliot Zuckerberg is an American media magnate, internet entrepreneur, and philanthropist. Zuckerberg is known for co-founding Meta Platforms, Inc. and serves as its chairman, chief executive officer, and controlling shareholder.</div>
+      <div class="qna_container">
+	   	    <input type='text' id='question' placeholder='Ask a question'></input>
+		      <input type='submit' id='submit' value='Submit' />
+	      </div>
+      <div class="answer" id="answer"></div>
+    </section>
+
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
