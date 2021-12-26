@@ -84,14 +84,13 @@ h1 {
   html {
     font-size: 50%;
   }
-  
 }
 
 @media (max-width: 700px) {
   html {
     font-size: 40%;
   }
-  .data{
+  .data {
     width: 85%;
   }
 }
@@ -100,5 +99,4 @@ h1 {
   html {
     font-size: 35%;
   }
-
 }
