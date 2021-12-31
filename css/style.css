@@ -11,9 +11,11 @@ html {
   font-size: 62.5%;
   height: auto;
 }
+body {
+  background-color: rgb(37, 37, 37);
+}
 
 section {
-  background-color: rgb(37, 37, 37);
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -31,15 +33,46 @@ h1 {
 }
 
 .data {
-  color: #ccc;
+  color: rgb(228, 228, 228);
   line-height: 1.7;
   font-size: 2rem;
+  font-weight: 600;
   width: 70%;
   min-height: 50vh;
-  margin: 3rem 10rem;
+  margin: 0rem 10rem;
   padding: 5rem;
   border: solid 1px #f00447;
   border-radius: 1rem;
+}
+.btn {
+  height: 4rem;
+  padding: 1.2rem;
+  width: 25rem;
+  font-size: 1.8rem;
+  border-radius: 25rem;
+  outline: none;
+  color: #ccc;
+  background-color: #f00447;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transform: translateY(-45%);
+  text-transform: capitalize;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn:hover {
+  /* background-color: #a4133c; */
+  width: 30rem;
+  height: 4.2rem;
+}
+.btn:active {
+  background-color: #a4133c;
+  width: 25rem;
+  height: 4rem;
+}
+.qna_container {
+  margin-top: 3rem;
 }
 
 #question {
@@ -65,16 +98,15 @@ h1 {
   background-color: #f00447;
   border: none;
   cursor: pointer;
-  transition: all 1s;
+  transition: all 0.5s ease;
 }
 
 #submit:hover {
-  transform: scale(1.2);
-  box-shadow: 0 0.5rem 2rem rgba(204, 204, 204, 0.479);
+  transform: scale(1.1);
+  box-shadow: 0 0.5rem 2rem rgba(204, 204, 204, 0.2);
 }
 #submit:active {
   transform: scale(1);
-  box-shadow: 0 0.5rem 2rem #ccc;
 }
 .answer {
   margin-top: 2rem;

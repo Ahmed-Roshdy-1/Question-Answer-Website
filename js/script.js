@@ -23,6 +23,7 @@ const data = document.getElementById("data");
 const question = document.getElementById("question");
 const submit = document.getElementById("submit");
 const answer = document.getElementById("answer");
+const removeStopWord = document.getElementById("remove_SW");
 
 const predict = async () => {
   model = await qna.load();
@@ -31,7 +32,7 @@ const predict = async () => {
     // const passage = document.getElementById("data").innerHTML;
     // const question = document.getElementById("question").value;
 
-    model.findAnswers(question.value, data.innerHTML.removeStopWords()).then((answers) => {
+    model.findAnswers(question.value, data.innerHTML).then((answers) => {
       console.log("Answers: ", answers);
       if (answers[0]) {
         answer.innerHTML = answers[0].text;
@@ -49,11 +50,11 @@ const predict = async () => {
 
 predict();
 
-// const removeStopWords = require("@purnomo_eko/remove-stop-words");
-
-// consol.log(removeStopWords("I want to have relationship with different religion", "en"));
-
-// // result will be [ 'relationship', 'different', 'religion' ]
+// Removing the Stop Word From The Pargaraph
+removeStopWord.addEventListener("click", () => {
+  const paragraph = data.innerHTML;
+  console.log("The Important Word From the Pargaraph:\n\n" + paragraph.removeStopWords());
+});
 
 String.prototype.removeStopWords = function () {
   var x;
@@ -524,5 +525,3 @@ String.prototype.removeStopWords = function () {
   }
   return cleansed_string.replace(/^\s+|\s+$/g, "");
 };
-
-console.log(data.innerHTML.removeStopWords());
