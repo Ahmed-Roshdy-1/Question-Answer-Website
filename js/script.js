@@ -35,6 +35,7 @@ const predict = async () => {
       console.log("Answers: ", answers);
       if (answers[0]) {
         answer.innerHTML = answers[0].text;
+        answer.style.color = "#f00447";
       } else {
         answer.innerHTML = "The question is not correct, check the syntax or ask a question about the paragraph";
         answer.style.color = "#d00000";
@@ -47,3 +48,9 @@ const predict = async () => {
 };
 
 predict();
+
+// const removeStopWords = require("@purnomo_eko/remove-stop-words");
+
+// consol.log(removeStopWords("I want to have relationship with different religion", "en"));
+
+// // result will be [ 'relationship', 'different', 'religion' ]
